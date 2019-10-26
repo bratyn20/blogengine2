@@ -8,9 +8,19 @@
             <h1>Posts:</h1>
 
             <div class="mt-5">
-        <h2>{% for name in names  %}
+        <h2>{% for post in posts  %}
+
+            <div class="card">
+            <h5 class="card-header">{{ post.title }}</h5>
+                <div class="card-body">
+                 <h5 class="card-title">{{ post.title }}</h5>
+                 <p class="card-text">{{ post.body }}</p>
+                 <a href="#" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+
             <p>
-                {{ name }}
+
             </p>
         {% endfor %}
         </h2>
